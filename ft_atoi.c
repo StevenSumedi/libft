@@ -6,7 +6,7 @@
 /*   By: ssumedi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 15:13:44 by ssumedi           #+#    #+#             */
-/*   Updated: 2017/10/08 22:00:37 by ssumedi          ###   ########.fr       */
+/*   Updated: 2017/10/08 01:07:00 by ssumedi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,52 +15,31 @@
 */
 
 #include "libft.h"
+#include <limits.h>
 
-static int		ft_isspace(int c)
+int		ft_atoi(const char *str)
 {
-	return (c == ' ' || (c >= 0x09 && c <= 0x0d));
-}
+	int i;
+	int nbr;
+	int negative;
 
-static int		get_return(unsigned long long ret, int neg, const char *str)
-{
-	int		count;
-
-	count = 0;
-	while (*str <= '1' || *str >= '9')
-		str++;
-	while (ft_isdigit(*(str + count)))
-		count++;
-	if (count >= 19)
-		return (neg == -1 ? 0 : -1);
-	if (ret > 9223372036854775807)
-		return (neg == -1 ? 0 : -1);
-	else
-		return (ret * neg);
-}
-
-int				ft_atoi(const char *str)
-{
-	unsigned long long		ret;
-	int						len;
-	int						x;
-	int						neg;
-
-	neg = 1;
-	x = -1;
-	len = 0;
-	ret = 0;
-	while (ft_isspace(*str))
-		str++;
-	while (str[len])
-		len++;
-	while (++x <= len)
+	nbr = 0;
+	negative = 0;
+	i = 0;
+	while ((str[i] == '\n') || (str[i] == '\v') || (str[i] == '\t') ||
+			(str[i] == '\r') || (str[i] == '\f') || (str[i] == ' '))
+		i++;
+	if (str[i] == '-')
+		negative = 1;
+	if (str[i] == '+' || str[i] == '-')
+		i++;
+	while ((str[i] >= '0') && (str[i] <= '9'))
 	{
-		if (ft_isdigit(str[x]))
-			ret = (ret * 10) + (str[x] - '0');
-		else if (x == 0 && (str[x] == '-' || str[x] == '+'))
-			neg = str[x] == '-' ? -1 : 1;
-		else
-			return (get_return(ret, neg, str));
+		nbr = nbr * 10 + str[i] - '0';
+		i++;
 	}
-	return (get_return(ret, neg, str));
+	if (negative == 1)
+		return (-nbr);
+	else
+		return (nbr);
 }
