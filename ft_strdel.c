@@ -6,7 +6,7 @@
 /*   By: ssumedi <ssumedi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/26 14:15:54 by ssumedi           #+#    #+#             */
-/*   Updated: 2017/10/03 21:08:38 by ssumedi          ###   ########.fr       */
+/*   Updated: 2017/10/08 02:48:40 by ssumedi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void		ft_strdel(char **as)
 {
