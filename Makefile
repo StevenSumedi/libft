@@ -6,7 +6,7 @@
 #    By: ssumedi <ssumedi@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/10/04 13:59:18 by ssumedi           #+#    #+#              #
-#    Updated: 2017/10/08 21:53:16 by ssumedi          ###   ########.fr        #
+#    Updated: 2017/10/08 23:27:24 by ssumedi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,8 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
 RM = rm -rf
+
+INC = -I includes/
 
 SRC =	ft_atoi.c		\
 		ft_bzero.c		\
@@ -79,8 +81,8 @@ SRC =	ft_atoi.c		\
 
 OBJ = $(SRC:.c=.o)
 
-$(NAME): libft.h
-	$(CC) $(CFLAGS) -c $(SRC)
+$(NAME): includes/libft.h
+	$(CC) $(CFLAGS) -c $(SRC) $(INC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
