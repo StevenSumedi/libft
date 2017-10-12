@@ -6,12 +6,12 @@
 /*   By: ssumedi <ssumedi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 11:51:59 by ssumedi           #+#    #+#             */
-/*   Updated: 2017/10/03 21:15:50 by ssumedi          ###   ########.fr       */
+/*   Updated: 2017/10/10 01:17:09 by ssumedi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Outputs the string s to the file descriptor fd followed by a '\n'.
+** Outputs the string s to the standard output followed by a '\n'.
 **
 ** Return value - none.
 */

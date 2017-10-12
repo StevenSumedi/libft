@@ -6,14 +6,15 @@
 /*   By: ssumedi <ssumedi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/27 16:17:06 by ssumedi           #+#    #+#             */
-/*   Updated: 2017/10/05 23:31:30 by ssumedi          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:41:23 by ssumedi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Allocate (with malloc(3)) and returns a "fresh" string ending with '\0'
-** representing the integer n given as argument. Negative numbers must be
-** supported. If the allocation fails, the function returns NULL.
+**	The itoa() function converts the integer n into a character string.
+**
+**	Return value: A pointer to the resulting null-terminated string, same as
+**	parameter, str.
 */
 
 #include "libft.h"

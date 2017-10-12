@@ -6,7 +6,7 @@
 /*   By: ssumedi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/22 16:21:40 by ssumedi           #+#    #+#             */
-/*   Updated: 2017/10/03 21:19:18 by ssumedi          ###   ########.fr       */
+/*   Updated: 2017/10/09 19:08:06 by ssumedi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	*ft_memset(void *str, int c, size_t n)
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	return (str);
+	return (ptr);
 }
